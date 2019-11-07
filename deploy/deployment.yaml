@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-server-test
+  labels:
+    app: go-server-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-server-test
+  template:
+    metadata:
+      labels:
+        app: go-server-test
+    spec:
+      containers:
+      - name: go-server-test
+        image: dmnkgrc/go-server-test:0.1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8080
+

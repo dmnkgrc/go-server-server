@@ -25,7 +25,7 @@ import (
 )
 
 func main() {
-	log.Printf("Server started")
+	log.Printf("Server started yay!")
 
 	router := sw.NewRouter()
 
